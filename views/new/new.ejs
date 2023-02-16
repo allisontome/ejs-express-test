@@ -1,0 +1,18 @@
+<%- include('.././models/Header') %>
+<br />
+
+<form action="/task/new" method="POST">
+  <input
+    type="text"
+    placeholder="insert your task here"
+    id="task"
+    name="task"
+    required
+  />
+  <input required type="date" id="date" name="date" />
+  <button type="submit">New</button>
+</form>
+<br />
+
+
+<%- include('.././models/Footer') %>

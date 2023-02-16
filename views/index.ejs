@@ -1,0 +1,21 @@
+<%- include('./models/Header') %>
+
+<link rel="stylesheet" type="text/css" href="/css/index.css" />
+
+<section class="home">
+<h2 class="title">Home Ejs</h2>
+
+<ul class="task-list">
+ <% tasks.forEach(function(task) { %>
+    <li class="list-item">
+    <label> <%= task.task %> </label>
+    <form id="form" action="/task/delete" method="POST">
+      <input class="hidden" type="hidden" value="<%= task.id %>" name="id" id="id" />
+      <button>delete</button>
+    </form>
+    </li>
+ <% }); %> 
+</ul>
+</section>
+
+<%- include('./models/Footer') %>
